@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <script src="../dist/main.js"></script>
+    <script>
+      let theAnalytics = new crdsAnalytics.CrdsAnalytics({
+        appName: "crdsAnalytics",
+        segmentWriteKey: ""
+      });
+    </script>
+  </header>
+  <body>
+    <form id="form">
+      <label for="fname">First Name: </label>
+      <input type="text" id="fname"><br>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+  <footer>
+    <script>
+      function onSubmit(event) {
+        theAnalytics.track("Form submitted");
+      }
+
+      const form = document.getElementById('form');
+      form.addEventListener('submit', onSubmit);
+    </script>
+  </footer>
+</html>
