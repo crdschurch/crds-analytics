@@ -11,17 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ample/crds-analytics.git"
+    "url": "git+https://github.com/crdschurch/crds-analytics.git"
   },
   "keywords": [
     "crossroads"
   ],
-  "author": "Ample, LLC",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/ample/crds-analytics/issues"
+    "url": "https://github.com/crdschurch/crds-analytics/issues"
   },
-  "homepage": "https://github.com/ample/crds-analytics#readme",
+  "homepage": "https://github.com/crdschurch/crds-analytics#readme",
   "devDependencies": {
     "@types/node": "^16.11.0",
     "http-server": "^13.0.2",
