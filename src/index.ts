@@ -4,7 +4,7 @@ import segmentPlugin from "@analytics/segment";
 import { CrdsAnalyticsConfig } from "./models/crds-analytics.model";
 
 
-export class CrdsAnalytics {
+export default class CrdsAnalytics {
    private debug: boolean = false;
    public static instance: CrdsAnalytics;
    private analytics: AnalyticsInstance;
