@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Analytics abstraction allowing for unified consumtion of analytics.",
   "main": "build/index.js",
+  "typings": "build/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "build:dev": "npm run build && http-server ./",
