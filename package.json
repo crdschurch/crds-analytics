@@ -7,7 +7,8 @@
     "build": "tsc -p tsconfig.json",
     "build:dev": "npm run build && http-server ./",
     "dev": "http-server ./",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npm i && npm run build"
   },
   "repository": {
     "type": "git",
