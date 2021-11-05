@@ -17,8 +17,11 @@ The following sections will be how to implement crds-analytics into various fron
 
 - [Angular](#angular)
 - [Stencil](#stencil)
+- [Jekyll + Gulp](#jekyll--gulp)
 
 ### Angular
+
+**Note:** these instructions are based off of [crds-connect](https://github.com/crdschurch/crds-connect). They assume that you have an existing `AnalyticsService` and are using the [angulartics2](https://github.com/angulartics/angulartics2) library.
 
 ### Install Dependencies
 
@@ -26,20 +29,33 @@ The first thing you will want to do is to install the `crds-analytics` package b
 
 ### Making it Available
 
-Create a `analytics.js` file which will be used to initialize `CrdsAnalytics` and export it to your application.
-The file contents should look something like this. **Imports may vary based on project structure**:
+In `AnalyticsService` you will want to do the following.
 
-```
-import CrdsAnalytics from "crds-analytics";
-import { environment } from "../environments/environment.local";
-
-export default () => {
-  return new CrdsAnalytics({
-    appName: "Crossroads Connect",
-    segmentWriteKey: environment.SEGMENT_WRITE_KEY
-  });
-}
-```
+1. `import CrdsAnalytics from "crds-analytics";`.
+1. Replace set `this.analytics` (or whatever property is `Angulartics2`) to be a new instance of `CrdsAnalytics`
+   ```
+   this.analytics = new CrdsAnalytics({
+     appName: 'crds-connect',
+     segmentWriteKey: environment.SEGMENT_WRITE_KEY
+   });
+   ```
+1. Update `track` (or other related calls)
+   ```
+   // Convert this...
+   this.analytics.eventTrack.next({
+     action: 'ConnectSearch',
+     properties: {
+       Query,
+       ResultsCount
+     }
+   });
+   // to this
+   this.analytics.track('MyActionName', {
+     property1: 'SOME_VALUE',
+     property2: 'SOME_OTHER_VALUE',
+   });
+   ```
+1. Remove everything left over related to `angulartics2`
 
 You may have noticed we are using `environment.SEGMENT_WRITE_KEY` in the above snippet. You will need to add this environment variable to your application with a key matching your desired Segment source if you do not already have it.
 
