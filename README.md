@@ -55,6 +55,25 @@ export default () => {
 };
 ```
 
+## Jekyll + Gulp
+
+### Install Dependencies
+
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#main`.
+
+### Making it Available
+
+In `config.js` you will want to add `node_modules/crds-analytics/dist/main` as a dependency. **Note:** The full path will be relative to the location of the `config.js` file.
+
+This will expose a `crdsAnalytics` object that can be used like the example below
+
+```
+window.globalAnalytics = new crdsAnalytics.default({
+  appName: 'YOUR_APP_NAME',
+  segmentWriteKey: 'YOUR_SEGMENT_WRITE_KEY'
+})
+```
+
 Loading environment variables may differ for your project, here we are using `process.env` with our application key stored in an environment variable. You will want to supply the Segment key that matches the source you wish to send analytics information to for your application in it's different environemtns.
 ### Make Analytics Calls:
 [Make Analytics Calls](#how-to-use)
