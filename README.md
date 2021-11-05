@@ -31,7 +31,7 @@ The following sections will be how to implement crds-analytics into various fron
 
 ### Install Dependencies
 
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#1.0.0`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i https://github.com/crdschurch/crds-analytics#main`.
 
 ### Making it Available
 
@@ -39,12 +39,14 @@ In `AnalyticsService` you will want to do the following.
 
 1. `import CrdsAnalytics from "crds-analytics";`.
 1. Replace `this.analytics` (or whatever property `Angulartics2` is related to) to be a new instance of `CrdsAnalytics`
+
    ```
    this.analytics = new CrdsAnalytics({
      appName: 'crds-connect',
      segmentWriteKey: environment.SEGMENT_WRITE_KEY
    });
    ```
+
 1. Update `track` (or other related calls)
 
    ```
@@ -65,6 +67,7 @@ In `AnalyticsService` you will want to do the following.
    ```
 
 1. Remove everything left over related to `angulartics2`
+1. Update failing tests if needed.
 
 You may have noticed we are using `environment.SEGMENT_WRITE_KEY` in the above snippet. You will need to add this environment variable to your application with a key matching your desired Segment source if you do not already have it.
 
@@ -76,7 +79,7 @@ You may have noticed we are using `environment.SEGMENT_WRITE_KEY` in the above s
 
 ### Install Dependencies
 
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#main`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i https://github.com/crdschurch/crds-analytics#main`.
 
 ### Making it Available
 
@@ -101,7 +104,7 @@ export default () => {
 
 ### Install Dependencies
 
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#main`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i https://github.com/crdschurch/crds-analytics#main`.
 
 ### Making it Available
 
