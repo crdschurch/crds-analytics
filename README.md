@@ -19,7 +19,7 @@ What this package does is creates a wrapper around the built in Segment methods 
 
 ## Setup
 
-The following sections will be how to implement crds-analytics into various frontend framworks.
+The following sections will be how to implement crds-analytics into various frontend frameworks.
 
 - [Angular](#angular)
 - [Stencil](#stencil)
@@ -38,7 +38,7 @@ The first thing you will want to do is to install the `crds-analytics` package b
 In `AnalyticsService` you will want to do the following.
 
 1. `import CrdsAnalytics from "crds-analytics";`.
-1. Replace set `this.analytics` (or whatever property is `Angulartics2`) to be a new instance of `CrdsAnalytics`
+1. Replace `this.analytics` (or whatever property `Angulartics2` is related to) to be a new instance of `CrdsAnalytics`
    ```
    this.analytics = new CrdsAnalytics({
      appName: 'crds-connect',
@@ -46,6 +46,7 @@ In `AnalyticsService` you will want to do the following.
    });
    ```
 1. Update `track` (or other related calls)
+
    ```
    // Convert this...
    this.analytics.eventTrack.next({
@@ -55,12 +56,14 @@ In `AnalyticsService` you will want to do the following.
        ResultsCount
      }
    });
+
    // to this
    this.analytics.track('MyActionName', {
      property1: 'SOME_VALUE',
      property2: 'SOME_OTHER_VALUE',
    });
    ```
+
 1. Remove everything left over related to `angulartics2`
 
 You may have noticed we are using `environment.SEGMENT_WRITE_KEY` in the above snippet. You will need to add this environment variable to your application with a key matching your desired Segment source if you do not already have it.
@@ -90,6 +93,10 @@ export default () => {
 };
 ```
 
+### Make Analytics Calls:
+
+[Make Analytics Calls](#how-to-use)
+
 ## Jekyll + Gulp
 
 ### Install Dependencies
@@ -115,7 +122,7 @@ Loading environment variables may differ for your project, here we are using `pr
 
 [Make Analytics Calls](#how-to-use)
 
-## How to Use:
+## How to Use
 
 To make calls to analytics you will need to do the following, these steps should be done in each file you wish to use analytics calls.
 
