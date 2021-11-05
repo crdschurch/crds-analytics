@@ -4,12 +4,18 @@ Analytics abstraction layer to allow for unified consumption of analytics events
 
 ## How it Works
 
-[Segment]() or more technically the analytics.js package that is created by and used to send tracking information upstream to the various Segment Destinations exposes several methods to the consumer. These methods are typically used by calling the `window['analytics']` object that gets created when using Segment.
+[Segment](https://segment.com/) or more technically the [analytics.js](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/) package that is created by and used to send tracking information upstream to the various Segment Destinations exposes several methods to the consumer. These methods are typically used by calling the `window['analytics']` object that gets created when using Segment.
 What this package does is creates a wrapper around the built in Segment methods that decorates the `props` object with additional information that is valuable for filtering in upstream applications. The wrapped methods that get exposed through this package are:
 
 - [`.track()`](#track)
 - [`.page()`](#page)
 - [`.identify()`](#identify)
+
+## Learn More in the Segment Docs
+
+- [Getting Started](https://segment.com/docs/getting-started/)
+- [Sources](https://segment.com/docs/connections/sources/) - This will be the connection from your project to Segment ([Available Methods](https://segment.com/docs/connections/spec/))
+- [Destinations](https://segment.com/docs/connections/destinations/) - This will be where the data goes once in Segment ex: Google Analytics
 
 ## Setup
 
