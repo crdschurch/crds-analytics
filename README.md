@@ -14,7 +14,7 @@ The following sections will be how to implement crds-analytics into various fron
 ### Angular
 
 ### Install Dependencies
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#1.0.0`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#1.0.1`.
 
 ### Making it Available
 Create a `analytics.js` file which will be used to initialize `CrdsAnalytics` and export it to your application.
@@ -39,7 +39,7 @@ You may have noticed we are using `environment.SEGMENT_WRITE_KEY` in the above s
 ## Stencil
 
 ### Install Dependencies
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#main`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#1.0.1`.
 
 ### Making it Available
 In the `src/global/` directory of your project create an `analytics.js` file. This file will be used to initialize the crds-analytics `CrdsAnalytics` class. Your file should look something like this:
@@ -59,7 +59,7 @@ export default () => {
 
 ### Install Dependencies
 
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#main`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#1.0.1`.
 
 ### Making it Available
 
