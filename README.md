@@ -31,7 +31,7 @@ The following sections will be how to implement crds-analytics into various fron
 
 ### Install Dependencies
 
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i https://github.com/crdschurch/crds-analytics#1.0.0`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#1.0.1`.
 
 ### Making it Available
 
@@ -79,7 +79,7 @@ You may have noticed we are using `environment.SEGMENT_WRITE_KEY` in the above s
 
 ### Install Dependencies
 
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i https://github.com/crdschurch/crds-analytics#1.0.0`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#1.0.1`.
 
 ### Making it Available
 
@@ -104,7 +104,7 @@ export default () => {
 
 ### Install Dependencies
 
-The first thing you will want to do is to install the `crds-analytics` package by running `npm i https://github.com/crdschurch/crds-analytics#1.0.0`.
+The first thing you will want to do is to install the `crds-analytics` package by running `npm i crdschurch/crds-analytics#1.0.1`.
 
 ### Making it Available
 
