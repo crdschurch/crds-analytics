@@ -15,7 +15,8 @@ export default class CrdsAnalytics {
       app: crdsAnalyticsConfig.appName,
       plugins: [
         segmentPlugin({
-          writeKey: crdsAnalyticsConfig.segmentWriteKey
+          writeKey: crdsAnalyticsConfig.segmentWriteKey,
+          customScriptSrc: `https://analytics.segment.crossroads.net/analytics.js/v1/${crdsAnalyticsConfig.segmentWriteKey}/analytics.min.js`
         })
       ]
       });
