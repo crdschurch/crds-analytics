@@ -3,13 +3,13 @@ const decorate = require('../build/index')
 test('should deocrate props with userautenticated flag equal to falase', () => {
   const config = {
     appName: 'testAnalytics',
-    segmentWriteKey: 'do not need one'
+    segmentWriteKey: 'none'
   }
   let props = {
     prop1: 'thing',
     prop2: 123
   }
-  let analytics = new decorate.CrdsAnalytics(config);
+  let analytics = new decorate.default(config);
   expect(analytics.decorateProps(props)).toEqual({
     prop1: 'thing',
     prop2: 123,
@@ -30,7 +30,7 @@ test('should decorate props with userid and userisauthenticated', () => {
     prop1: 'thing',
     prop2: 123
   }
-  let analytics = new decorate.CrdsAnalytics(config);
+  let analytics = new decorate.default(config);
   expect(analytics.decorateProps(props)).toEqual({
     prop1: 'thing',
     prop2: 123,
