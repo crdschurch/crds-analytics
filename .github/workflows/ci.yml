@@ -13,6 +13,10 @@ jobs:
         with:
           node-version: "16"
 
+      - run: npm install
+      
+      - run: npm run test
+
   # integration:
   #   name: Integration Tests
     #   needs: test
