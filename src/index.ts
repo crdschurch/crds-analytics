@@ -20,6 +20,7 @@ export default class CrdsAnalytics {
         })
       ]
       });
+    this.reset();  // reset the analytics instance to clear out any previous user data
    }
 
    private log(msg = "") {
@@ -75,7 +76,6 @@ export default class CrdsAnalytics {
 
     public identify(props: object = {}) {
       this.log(`identify(${this.getUserID()})`);
-      this.reset();  // reset the analytics instance to clear out any previous user data
       this.analytics.identify(this.decorateProps(props));
     }
   
