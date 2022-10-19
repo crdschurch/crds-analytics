@@ -56,6 +56,7 @@ export default class CrdsAnalytics {
       }
   
       return {
+        external_application_value: id,
         ministryplatformcontactid: id,
         authenticatedUserFlag: true,
         ...props
@@ -67,9 +68,9 @@ export default class CrdsAnalytics {
       return this.getCookie("userId");
     }
 
-    public identify() {
+    public identify(props: object = {}) {
       this.log(`identify(${this.getUserID()})`);
-      this.analytics.identify(this.getUserID() || undefined);
+      this.analytics.identify(this.decorateProps(props));
     }
   
     public track(title, props: object = {}) {
