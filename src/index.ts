@@ -68,8 +68,14 @@ export default class CrdsAnalytics {
       return this.getCookie("userId");
     }
 
+    public reset() {
+      this.log("reset()");
+      this.analytics.reset();
+    }
+
     public identify(props: object = {}) {
       this.log(`identify(${this.getUserID()})`);
+      this.reset();  // reset the analytics instance to clear out any previous user data
       this.analytics.identify(this.decorateProps(props));
     }
   

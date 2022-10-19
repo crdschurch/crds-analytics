@@ -1,6 +1,6 @@
 {
   "name": "crds-analytics",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Analytics abstraction allowing for unified consumption of analytics.",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
